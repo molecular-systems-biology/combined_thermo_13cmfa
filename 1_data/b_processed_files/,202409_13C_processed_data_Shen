@@ -1,0 +1,168 @@
+,name,reaction,gpr,subsystem,pathway,C4_mfaLB,C4_mfaUB,CENPK_mfaLB,CENPK_mfaUB
+ASNS1,asparagine synthase (glutamine-hydrolysing),asp__L_c + atp_c + gln__L_c + h2o_c --> amp_c + asn__L_c + glu__L_c + h_c + ppi_c,YGR124W or YPR145W,"Alanine, aspartate and glutamate metabolism",amino acid,0.0571648540295589,0.821461811109753,0.0854836814524308,1.22926759719849
+ASPK,aspartate kinase,asp__L_c + atp_c --> 4pasp_c + adp_c,YER052C,"Glycine, serine and threonine metabolism",amino acid,0.155231627757734,0.25171891091838,0.232131936040479,0.455070604652543
+ASPTA,aspartate transaminase,akg_c + asp__L_c <=> glu__L_c + oaa_c,YLR027C,Oxidative phosphorylation,ox phos,-0.61335291399231,-0.3605203174396,-1.21441776576637,-0.188774320262448
+ASPTAm,aspartate transaminase,glu__L_m + oaa_m --> akg_m + asp__L_m,YKL106W,"Alanine, aspartate and glutamate metabolism",amino acid,1e-07,0.0854762345552444,1e-07,0.526739731431007
+ASAD,aspartate-semialdehyde dehydrogenase,4pasp_c + h_c + nadph_c --> aspsa_c + nadp_c + pi_c,YDR158W,"Glycine, serine and threonine metabolism",amino acid,0.155231627757734,0.25171891091838,0.232131936040479,0.455070604652543
+ALATA_Lm,L-alanine transaminase,glu__L_m + pyr_m --> akg_m + ala__L_m,YLR089C,"Alanine, aspartate and glutamate metabolism",amino acid,1e-07,0.0586897419533514,0.0212697164397869,0.342195734635028
+PGMT,phosphoglucomutase,g6p_c --> g1p_c,YMR105C or YKL127W,Carbohydrate biosynthesis,sugar,0.43560425374156,0.43591551114156,0.412355974589433,0.412566977389433
+FBP,fructose-bisphosphatase,fdp_c + h2o_c --> f6p_c + pi_c,YLR377C,Unassigned,other,1e-07,0.604082524776459,1e-07,2.71197319110111
+ICL,isocitrate lyase,icit_c --> glx_c + succ_c,YER065C,Glyoxylate metabolism,other,0.0419053045498826,0.117660254128534,2e-07,0.162201628221935
+MALS,malate synthase,accoa_c + glx_c + h2o_c --> coa_c + h_c + mal__L_c,YIR031C or YNL117W,Glyoxylate metabolism,other,0.0419052045498826,0.0742775022183488,1e-07,0.0295971408320449
+MEm,malic enzyme (NAD),mal__L_m + nad_m --> co2_m + nadh_m + pyr_m,YKL029C,Unassigned,other,0.257014929893684,0.36779782978111,0.993699799578587,1.7141708297819
+PPCK,phosphoenolpyruvate carboxykinase,atp_c + oaa_c --> adp_c + co2_c + pep_c,YKR097W,Unassigned,other,0.911297906931315,2.75114288053236,9.999801533644e-08,1.88287978765399
+PC,pyruvate carboxylase,atp_c + hco3_c + pyr_c --> adp_c + h_c + oaa_c + pi_c,YBR218C or YGL062W,Unassigned,other,1.82807566436271,3.69522166779857,2.23081332902104,4.57969387093739
+ACGKm,acetylglutamate kinase,acglu_m + atp_m --> acg5p_m + adp_m,YER069W,Arginine and proline metabolism,amino acid,0.0475550591945648,0.0820066559586328,0.0926682882548114,0.546723047498293
+ACOTAm,acteylornithine transaminase,acg5sa_m + glu__L_m --> acorn_m + akg_m,YOL140W,Arginine and proline metabolism,amino acid,0.0475550591945648,0.0820066559586328,0.0926682882548114,0.546723047498293
+ARGSL,argininosuccinate lyase,argsuc_c <=> arg__L_c + fum_c,YHR018C,Arginine and proline metabolism,amino acid,0.0475550578648997,0.127476696507835,0.0710451946706297,0.347037215368652
+ARGSS,argininosuccinate synthase,asp__L_c + atp_c + citr__L_c <=> amp_c + argsuc_c + h_c + ppi_c,YOL058W,Arginine and proline metabolism,amino acid,0.0475550591945648,0.127476692199707,0.0710451883169323,0.347037215368652
+CBPS,carbamoyl-phosphate synthase (glutamine-hydrolysing),2.0 atp_c + gln__L_c + h2o_c + hco3_c --> 2.0 adp_c + cbp_c + glu__L_c + 2.0 h_c + pi_c,YJL130C and YJR109C and YOR303W,Pyrimidine metabolism,nucleic acid,0.0887403397426221,0.168662250041962,0.159393637570104,0.435409072545122
+GLU5K,glutamate 5-kinase,atp_c + glu__L_c --> adp_c + glu5p_c,YDR300C,Arginine and proline metabolism,amino acid,0.0175389476159152,0.455829229902252,9.999942283478e-08,0.529839842372574
+AGPRm,N-acetyl-g-glutamyl-phosphate reductase,acg5p_m + h_m + nadph_m --> acg5sa_m + nadp_m + pi_m,YER069W,Arginine and proline metabolism,amino acid,0.0475550591945648,0.0820066559586328,0.0926682882548114,0.546723047498293
+OCBT,ornithine carbamoyltransferase,cbp_c + orn_c --> citr__L_c + h_c + pi_c,YJL088W,Arginine and proline metabolism,amino acid,0.0475550591945648,0.127476692199707,0.0710451785670153,0.347037215368652
+ORNTACm,ornithine transacetylase,acorn_m + glu__L_m --> acglu_m + orn_m,YMR062C,Arginine and proline metabolism,amino acid,0.0475550591945648,0.0820066559586328,0.0926682882548114,0.546723047498293
+ACONTm,citrate to cis-aconitate(3-),cit_m <=> acon_C_m + h2o_m,YLR304C,Citric acid cycle,TCA,0.616622750298882,0.693163324730301,0.611337035894394,0.717291668057442
+AKGDm,2-oxoglutarate dehydrogenase,akg_m + coa_m + nad_m --> co2_m + nadh_m + succoa_m,YDR148C and YFL018C and YIL125W,Citric acid cycle,TCA,0.173401765356112,0.275899884850598,1e-07,0.140649838258934
+CSm,citrate synthase,accoa_m + h2o_m + oaa_m --> cit_m + coa_m + h_m,YNR001C or YPR001W,Citric acid cycle,TCA,0.616622749827676,0.693163319634293,0.611337064841803,0.717291686396039
+ICDHxm,isocitrate dehydrogenase (NAD+),icit_m + nad_m --> akg_m + co2_m + nadh_m,YNL037C and YOR136W,Citric acid cycle,TCA,1e-07,0.651257827877998,1e-07,0.717291250824928
+ICDHy,isocitrate dehydrogenase (NADP),icit_c + nadp_c --> akg_c + co2_c + nadph_c,YLR174W,Unassigned,other,1e-07,0.651257827090119,1e-07,0.702560079340248
+ICDHym,isocitrate dehydrogenase,icit_m + nadp_m --> akg_m + co2_m + nadph_m,YDL066W,Citric acid cycle,TCA,1e-07,0.0532012162034498,9.999635420659e-08,0.332963590607174
+SUCOAS1m,succinate-CoA ligase (ADP-forming),adp_m + pi_m + succoa_m --> atp_m + coa_m + succ_m,YGR244C and YOR142W,Citric acid cycle,TCA,0.173401765356112,0.275899884850598,1e-07,0.140649838258934
+MTHFR3,"5,10-methylenetetrahydrofolate reductase (NADPH)",h_c + mlthf_c + nadph_c --> 5mthf_c + nadp_c,YGL125W or YPL023C,Folate metabolism,folate,0.0250051189865725,0.0250229861865725,0.0641085821269746,0.0641413865269746
+FTHFL,formate-tetrahydrofolate ligase,atp_c + for_c + thf_c <=> 10fthf_c + adp_c + pi_c,YGR204W,Folate metabolism,folate,-5.21375770449869,-5.03887154921254,-2.39053364739322,-1.78061226452526
+MTHFC,methenyltetrahydrofolate cyclohydrolase,h2o_c + methf_c <=> 10fthf_c + h_c,YGR204W,Folate metabolism,folate,5.1355289965868,5.31034608185291,1.9721657037735,2.58208707347291
+MTHFD,methylenetetrahydrofolate dehydrogenase (NADP),mlthf_c + nadp_c <=> methf_c + nadph_c,YGR204W,Folate metabolism,folate,3.3992705643177,5.31034597754479,0.260606484392737,2.58208697347291
+ANS,anthranilate synthase,chor_c + gln__L_c --> anth_c + glu__L_c + h_c + pyr_c,YER090W and YKL211C,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,0.00800793022080507,0.00801365222080505,0.0119749712795006,0.0119810988795006
+GLUDy,glutamate dehydrogenase (NADP),akg_c + h_c + nadph_c + nh4_c --> glu__L_c + h2o_c + nadp_c,YAL062W or YOR375C,Arginine and proline metabolism,amino acid,-4.2690085865063,-6.99671655567576,-1.35555909412338,-3.90834259687005
+GLNS,glutamine synthetase,atp_c + glu__L_c + nh4_c --> adp_c + gln__L_c + h_c + pi_c,YPR035W,"Alanine, aspartate and glutamate metabolism",amino acid,0.387299207442888,2.24275367290202,1.04480346930045,3.78189830955286
+ALCD2m,"alcohol dehydrogenase, (acetaldehyde to ethanol)",acald_m + h_m + nadh_m --> etoh_m + nad_m,YGL256W or YMR083W,Glycolysis / Gluconeogenesis,glycolysis,-1e-07,-0.431917035934093,-9.936608628697e-08,-0.279360446318627
+G3PT,glycerol-3-phosphatase,glyc3p_c + h2o_c --> glyc_c + pi_c,YER062C or YIL053W,Glycerol secretion,transport,1e-07,0.0510666279530104,2.03163907569189,2.04543186980683
+G3PD1,glycerol-3-phosphate dehydrogenase (NAD),dhap_c + h_c + nadh_c --> glyc3p_c + nad_c,YDL022W or YOL059W,Lipid biosynthesis,lipid,1e-07,0.056259296164178,1e-07,2.06584091484547
+CYSTS,cystathionine beta-synthase,hcys__L_c + ser__L_c <=> cyst__L_c + h2o_c,YGR155W,"Glycine, serine and threonine metabolism",amino acid,-0.0140547901391983,0.0404873849412754,-0.021013081073761,1.30113430778898
+GHMT2,glycine hydroxymethyltransferase,ser__L_c + thf_c <=> gly_c + h2o_c + mlthf_c,YLR058C,"Glycine, serine and threonine metabolism",amino acid,5.16144886612892,5.33626595139503,2.03781932592392,2.64777429401874
+HSDy,homoserine dehydrogenase (NADP),aspsa_c + h_c + nadph_c --> hom__L_c + nadp_c,YJR139C,"Glycine, serine and threonine metabolism",amino acid,1e-07,0.181058250902643,5.836439464543e-08,0.232250607828424
+HSK,homoserine kinase,atp_c + hom__L_c --> adp_c + h_c + phom_c,YHR025W,"Glycine, serine and threonine metabolism",amino acid,0.0686223680686513,0.165047774489505,0.102617237977275,0.404258992842093
+ENO,enolase,2pg_c <=> h2o_c + pep_c,YPL281C or YGR254W or YHR174W or YMR323W or YOR393W,Glycolysis / Gluconeogenesis,glycolysis,3.15682020783424,3.49264791607857,48.0547268376103,49.6617782116879
+FBA,fructose-bisphosphate aldolase,fdp_c <=> dhap_c + g3p_c,YKL060C,Glycolysis / Gluconeogenesis,glycolysis,3.10222826898098,3.70631068944931,26.5131602989269,29.2823415061228
+PGI,glucose-6-phosphate isomerase,g6p_c <=> f6p_c,YBR196C,Glycolysis / Gluconeogenesis,glycolysis,3.0935428319283,3.21647055883002,26.2642429563251,26.5876554423132
+GAPD,glyceraldehyde-3-phosphate dehydrogenase,g3p_c + nad_c + pi_c <=> 13dpg_c + h_c + nadh_c,YGR192C or YJL052W or YJR009C,Glycolysis / Gluconeogenesis,glycolysis,6.36929176747799,6.44010555744171,51.2415310889482,51.4376251101494
+PDHm,pyruvate dehydrogenase,coa_m + nad_m + pyr_m --> accoa_m + co2_m + nadh_m,YBR221C and YER178W and YFL018C and YGR193C and YNL071W,Citric acid cycle,TCA,0.697622819389685,0.774163389196301,0.732439312482037,0.838331997636273
+HEX1,hexokinase (D-glucose:ATP),atp_c + glc__D_c --> adp_c + g6p_c + h_c,YLR446W or YCL040W or YFR053C or YGL253W,Glycolysis / Gluconeogenesis,glycolysis,4.0630532319131,4.0632532319131,27.6929134512668,27.6931134512668
+PFK,phosphofructokinase (f6p),atp_c + f6p_c --> adp_c + fdp_c + h_c,YMR205C or (YGR240C and YMR205C),Glycolysis / Gluconeogenesis,glycolysis,3.43842746766704,3.70631079057304,26.6590243634959,29.2823416061228
+PGK,phosphoglycerate kinase,13dpg_c + adp_c <=> 3pg_c + atp_c,YCR012W,Glycolysis / Gluconeogenesis,glycolysis,-6.36929176747799,-6.44010555744171,-51.2415310975302,-51.4376251133652
+PGM,phosphoglycerate mutase,3pg_c <=> 2pg_c,YOR283W or YKL152C,Glycolysis / Gluconeogenesis,glycolysis,-3.15682020783424,-3.49264791607857,-48.0547268376103,-49.6617782116879
+PYK,pyruvate kinase,adp_c + h_c + pep_c --> atp_c + pyr_c,YAL038W or YOR347C,Glycolysis / Gluconeogenesis,glycolysis,4.08155639993315,5.97408526249644,47.9932408250637,51.3078240736416
+TPI,triose-phosphate isomerase,dhap_c <=> g3p_c,YDR050C,Glycolysis / Gluconeogenesis,glycolysis,3.09373013675213,3.16378164291382,24.4455160774452,24.6421979112791
+PRMICIi,1-(5-phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino)imidazole-4-carboxamide isomerase,prfp_c --> prlp_c,YIL020C,Histidine metabolism,amino acid,0.0237774789324498,0.0237944689324498,0.0355567297878037,0.0355749241878036
+ATPPRT,ATP phosphoribosyltransferase,atp_c + h_c + prpp_c --> ppi_c + prbatp_c,YER055C,Histidine metabolism,amino acid,0.0237774789324498,0.0237944689324498,0.0355567297878037,0.0355749241878036
+HISTD,histidinol dehydrogenase,h2o_c + histd_c + 2.0 nad_c --> 3.0 h_c + his__L_c + 2.0 nadh_c,YCL030C,Histidine metabolism,amino acid,0.0237774789324498,0.0237944689324498,0.0355567297878037,0.0355749241878036
+HISTP,histidinol-phosphatase,h2o_c + hisp_c --> histd_c + pi_c,YFR025C,Histidine metabolism,amino acid,0.0237774789324498,0.0237944689324498,0.0355567297878037,0.0355749241878036
+HSTPT,histidinol-phosphate transaminase,glu__L_c + imacp_c --> akg_c + hisp_c,YIL116W,Histidine metabolism,amino acid,0.0237774789324498,0.0237944689324498,0.0355567297878037,0.0355749241878036
+IGPDH,imidazoleglycerol-phosphate dehydratase,eig3p_c --> h2o_c + imacp_c,YOR202W,Histidine metabolism,amino acid,0.0237774789324498,0.0237944689324498,0.0355567297878037,0.0355749241878036
+PRPPS,phosphoribosylpyrophosphate synthetase,atp_c + r5p_c --> amp_c + h_c + prpp_c,(YKL181W and YER099C) or (YKL181W and YHL011C) or (YKL181W and YBL068W) or (YER099C and YOL061W) or (YBL068W and YOL061W),Histidine metabolism,amino acid,0.180817990301535,0.249685630551113,0.213856017732225,0.37268392326495
+FDH,formate dehydrogenase,for_c + nad_c --> co2_c + nadh_c,YOR388C,Detoxification,other,5.46427895925119,5.70097331474476,2.64286025104736,3.16926153815291
+METS,methionine synthase,5mthf_c + hcys__L_c --> met__L_c + thf_c,YER091C,Cysteine and methionine metabolism,amino acid,0.0250051189865725,0.0250229861865725,0.0641085821269746,0.0641413865269746
+CYSTGL,cystathionine g-lyase,cyst__L_c + h2o_c --> 2obut_c + cys__L_c + nh4_c,YAL012W,Cysteine and methionine metabolism,amino acid,1e-07,0.0726162940263748,1e-07,0.108567707977573
+HSERTA,homoserine O-trans-acetylase,accoa_c + hom__L_c --> achms_c + coa_c,YNL277W,Cysteine and methionine metabolism,amino acid,0.0140449868212029,0.0866711364288759,0.0210026158856311,0.129580970863204
+AHSERL2,O-acetylhomoserine (thiol)-lyase,achms_c + h2s_c --> ac_c + hcys__L_c,YLR303W,Cysteine and methionine metabolism,amino acid,1e-07,0.0157807167116448,1e-07,0.0235937253083031
+ADK1,adenylate kinase,amp_c + atp_c --> 2.0 adp_c,YDL166C or YDR226W,Purine metabolism,nucleic acid,2.01519200205803,2.87317672836802,3.33697769367889,4.57862433058856
+FUM,fumarase,fum_c + h2o_c <=> mal__L_c,YPL262W,Glyoxylate metabolism,other,0.160271406173706,0.209527730941772,0.139346737458358,0.415234785582518
+FUMm,fumarase,fum_m + h2o_m <=> mal__L_m,YPL262W,Citric acid cycle,TCA,0.173401865356112,0.275899984850598,-0.000642991913856639,0.140649929642677
+MDH,malate dehydrogenase,mal__L_c + nad_c <=> h_c + nadh_c + oaa_c,YOL126C,Glyoxylate metabolism,other,-0.556257233023643,-0.480242684483528,-1.5357884615759,-0.962908259634793
+MDHm,malate dehydrogenase,mal__L_m + nad_m <=> h_m + nadh_m + oaa_m,YKL085W,Citric acid cycle,TCA,0.622065812349319,0.741715490818024,-0.183425648649937,0.215586572885513
+PGL,6-phosphogluconolactonase,6pgl_c + h2o_c --> 6pgc_c + h_c,YGR248W or YHR163W,Pentose phosphate pathway,PPP,0.403648423830753,0.527092419732476,0.683283409618937,1.00669588814675
+GND,phosphogluconate dehydrogenase,6pgc_c + nadp_c --> co2_c + nadph_c + ru5p__D_c,YGR256W or YHR183W,Pentose phosphate pathway,PPP,0.403648423830753,0.527092419732476,0.683283409618937,1.00669588814675
+RPI,ribose-5-phosphate isomerase,ru5p__D_c <=> r5p_c,YOR095C,Pentose phosphate pathway,PPP,-0.286974835604319,-0.353308427651264,-0.409450262784958,-0.601595431566238
+RPE,ribulose 5-phosphate 3-epimerase,ru5p__D_c <=> xu5p__D_c,YJL121C,Pentose phosphate pathway,PPP,0.112335875630379,0.176725015044212,0.273773089051247,0.489441469311714
+TALA,transaldolase,g3p_c + s7p_c <=> e4p_c + f6p_c,YGR043C or YLR354C,Pentose phosphate pathway,PPP,0.0954071679630928,0.729983551229975,0.19559435914901,3.0015573246645
+TKT2,transketolase 2,xu5p__D_c + e4p_c <=> f6p_c + g3p_c,YBR117C or YPR074C,Pentose phosphate pathway,PPP,0.0169287919998169,0.0490953177213669,0.0781788378953934,0.186043053865433
+TKT1,transketolase 1,xu5p__D_c + r5p_c <=> s7p_c + g3p_c,YBR117C or YPR074C,Pentose phosphate pathway,PPP,0.0954070687294006,0.127629682421684,0.19559425914901,0.303398420592122
+ACS,acetyl-CoA synthetase,ac_c + atp_c + coa_c --> accoa_c + amp_c + ppi_c,YAL054C or YLR153C,Lipid biosynthesis,lipid,0.329204443243547,0.436806505731258,0.826978280838399,0.986137549335237
+ALCD2x,"alcohol dehydrogenase, (acetaldehyde to ethanol)",acald_c + h_c + nadh_c --> etoh_c + nad_c,YBR145W or YOL086C,Glycolysis / Gluconeogenesis,glycolysis,-0.0127551276002802,-0.444872063534373,-45.6160126556852,-45.8955730020038
+HCITSm,homocitrate synthase,accoa_m + akg_m + h2o_m --> coa_m + h_m + hcit_m,YDL131W or YDL182W,Lysine metabolism,amino acid,0.0809422329620087,0.0810000695620087,0.121040311240234,0.121102247640235
+PYRDC,pyruvate decarboxylase,h_c + pyr_c --> acald_c + co2_c,YGR087C or YLR044C or YLR134W,Glycolysis / Gluconeogenesis,glycolysis,1.32001938106154,1.44096151787356,46.5061576769348,46.7289775635469
+AATA,2-aminoadipate transaminase,2oxoadp_c + glu__L_c --> L2aadp_c + akg_c,YER152C or YGL202W or YJL060W,Lysine metabolism,amino acid,0.0809422329620087,0.0810000695620087,0.121040311240234,0.121102247640235
+HACNHm,homoacontinate hydratase,h2o_m + hacon_C_m --> hicit_m,YJL200C or YDR234W,Lysine metabolism,amino acid,0.0809422329620087,0.0810000695620087,0.121040311240234,0.121102247640235
+HICITDm,homoisocitrate dehydrogenase,hicit_m + nad_m --> 2oxoadp_m + co2_m + nadh_m,YIL094C,Lysine metabolism,amino acid,0.0809422329620087,0.0810000695620087,0.121040311240234,0.121102247640235
+AASAD1,L-aminoadipate-semialdehyde dehydrogenase (NADPH),L2aadp_c + atp_c + h_c + nadph_c --> L2aadp6sa_c + amp_c + nadp_c + ppi_c,YBR115C and YGL154C,Lysine metabolism,amino acid,0.0809422329620087,0.0810000695620087,0.121040311240234,0.121102247640235
+SACCD2,"saccharopine dehydrogenase (NAD, L-lysine forming)",h2o_c + nad_c + saccrp__L_c --> akg_c + h_c + lys__L_c + nadh_c,YIR034C,Lysine metabolism,amino acid,0.0809422329620087,0.0810000695620087,0.121040311240234,0.121102247640235
+SACCD1,"saccharopine dehydrogenase (NADP, L-glutamate forming)",L2aadp6sa_c + glu__L_c + h_c + nadph_c --> h2o_c + nadp_c + saccrp__L_c,YNR050C,Lysine metabolism,amino acid,0.0809422329620087,0.0810000695620087,0.121040311240234,0.121102247640235
+THRA,threonine aldolase,thr__L_c --> acald_c + gly_c,YEL046C,"Glycine, serine and threonine metabolism",amino acid,-1e-07,-0.0964255064208532,-1e-07,-0.222819986612063
+THRS,threonine synthase,h2o_c + phom_c --> pi_c + thr__L_c,YCR053W,"Glycine, serine and threonine metabolism",amino acid,0.0686223680686513,0.165047774489505,0.102617237977275,0.404258992842093
+DHQT,3-dehydroquinate dehydratase,3dhq_c --> 3dhsk_c + h2o_c,YDR127W,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,0.0784782759632759,0.0785343519632759,0.117355343904797,0.117415394704797
+DHQS,3-dehydroquinate synthase,2dda7p_c --> 3dhq_c + pi_c,YDR127W,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,0.0784782759632759,0.0785343519632759,0.117355343904797,0.117415394704797
+DDPA,3-deoxy-D-arabino-heptulosonate 7-phosphate synthetase,e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c,YBR249C or YDR035W,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,0.0784782759632759,0.0785343519632759,0.117355343904797,0.117415394704797
+ALDD2y,"aldehyde dehydrogenase (acetaldehyde, NADP)",acald_c + h2o_c + nadp_c --> ac_c + 2.0 h_c + nadph_c,YPL061W,Unassigned,other,0.82198020181366,1.01674743281572,0.525192121520822,0.833404461543073
+ALDD2ym,"aldehyde dehydrogenase (acetylaldehyde, NADP)",acald_m + h2o_m + nadp_m --> ac_m + 2.0 h_m + nadph_m,YER073W or YOR374W,Unassigned,other,1e-07,0.0531671157135037,1e-07,0.278204300809274
+ANPRT,anthranilate phosphoribosyltransferase,anth_c + prpp_c --> ppi_c + pran_c,YDR354W,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,0.0794497717746642,0.148245050502601,0.011975071835358,0.170699671497149
+CHORM,chorismate mutase,chor_c --> pphn_c,YPR060C,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,0.0704703457424708,0.0705206997424708,0.105380372625296,0.105434295825296
+CHORS,chorismate synthase,3psme_c --> chor_c + pi_c,YGL148W,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,0.0784782759632759,0.0785343519632759,0.117355343904797,0.117415394704797
+IGPS,indole-3-glycerol-phosphate synthase,2cpr5p_c + h_c --> 3ig3p_c + co2_c + h2o_c,YKL211C,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,0.0794497717746642,0.148245050502601,0.011975071835358,0.170699671497149
+PHETA1,phenylalanine transaminase,glu__L_c + phpyr_c --> akg_c + phe__L_c,YGL202W or YHR137W,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,-0.0463231193153798,-0.0463562191153798,-0.0692709759078886,-0.0693064219078886
+PRAIi,phosphoribosylanthranilate isomerase,pran_c --> 2cpr5p_c,YDR007W,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,0.0794497717746642,0.148245050502601,0.011975071835358,0.170699671497149
+PPNDH,prephenate dehydratase,h_c + pphn_c --> co2_c + h2o_c + phpyr_c,YNL316C,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,0.0463231193153798,0.0463562191153798,0.0692709759078886,0.0693064219078886
+PPND2,prephenate dehydrogenase (NADP),nadp_c + pphn_c --> 34hpp_c + co2_c + nadph_c,YBR166C,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,0.024147226427091,0.024164480627091,0.0361093967174079,0.0361278739174079
+SHK3D,shikimate dehydrogenase,3dhsk_c + h_c + nadph_c --> nadp_c + skm_c,YDR127W,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,0.0784782759632759,0.0785343519632759,0.117355343904797,0.117415394704797
+SHKK,shikimate kinase,atp_c + skm_c --> adp_c + h_c + skm5p_c,YDR127W,"Phenylalanine, tyrosine and tryptophan metabolism",amino acid,0.0784782759632759,0.0785343519632759,0.117355343904797,0.117415394704797
+TRPS1,tryptophan synthase (indoleglycerol phosphate),3ig3p_c + ser__L_c --> g3p_c + h2o_c + trp__L_c,YGL026C,"Glycine, serine and threonine metabolism",amino acid,0.0794497717746642,0.148245050502601,0.011975071835358,0.170699671497149
+TYRTA,tyrosine transaminase,34hpp_c + glu__L_c --> akg_c + tyr__L_c,YGL202W or YHR137W,Arginine and proline metabolism,amino acid,-0.024147226427091,-0.024164480627091,-0.0361093967174079,-0.0361278739174079
+ACHBSm,2-aceto-2-hydroxybutanoate synthase,2obut_m + h_m + pyr_m --> 2ahbut_m + co2_m,(YCL009C and YMR108W) or YMR108W,"Valine, leucine and isoleucine metabolism",amino acid,0.0725645552465625,0.0726164056465625,0.108512282177573,0.108567807977573
+IPPMIb,2-isopropylmalate hydratase,3c3hmp_c --> 2ippm_c + h2o_c,YGL009C,"Valine, leucine and isoleucine metabolism",amino acid,-0.0986828353127625,-0.0987533483127625,-0.147569496421908,-0.147645007821908
+IPPS,2-isopropylmalate synthase,3mob_c + accoa_c + h2o_c --> 3c3hmp_c + coa_c + h_c,YNL104C or YOR108W,"Valine, leucine and isoleucine metabolism",amino acid,0.0986828353127625,0.0987533483127625,0.147569496421908,0.147645007821908
+OMCDC,2-oxo-4-methyl-3-carboxypentanoate decarboxylation,3c4mop_c + h_c --> 4mop_c + co2_c,YJR148W,Cysteine and methionine metabolism,amino acid,0.0986828353127625,0.0987533483127625,0.147569496421908,0.147645007821908
+IPPMIa,3-isopropylmalate dehydratase,2ippm_c + h2o_c --> 3c2hmp_c,YGL009C,"Valine, leucine and isoleucine metabolism",amino acid,-0.0986828353127625,-0.0987533483127625,-0.147569496421908,-0.147645007821908
+IPMD,3-isopropylmalate dehydrogenase,3c2hmp_c + nad_c --> 3c4mop_c + h_c + nadh_c,YCL018W,"Valine, leucine and isoleucine metabolism",amino acid,0.0986828353127625,0.0987533483127625,0.147569496421908,0.147645007821908
+KARA1m,acetohydroxy acid isomeroreductase,alac_m + h_m + nadph_m --> 23dhmb_m + nadp_m,YLR355C,"Valine, leucine and isoleucine metabolism",amino acid,0.188988272809772,0.189123312809772,0.28261135463471,0.282755967034711
+ACLSm,acetolactate synthase,h_m + 2.0 pyr_m --> alac_m + co2_m,(YCL009C and YMR108W) or YMR108W,"Valine, leucine and isoleucine metabolism",amino acid,0.188988272809772,0.189123312809772,0.28261135463471,0.282755967034711
+DHAD1m,"dihydroxy-acid dehydratase (2,3-dihydroxy-3-methylbutanoate)",23dhmb_m --> 3mob_m + h2o_m,YJR016C,"Valine, leucine and isoleucine metabolism",amino acid,0.188988272809772,0.189123312809772,0.28261135463471,0.282755967034711
+DHAD2m,"dihydroxy-acid dehydratase (2,3-dihydroxy-3-methylpentanoate)",23dhmp_m --> 3mop_m + h2o_m,YJR016C,"Valine, leucine and isoleucine metabolism",amino acid,0.0725645552465625,0.0726164056465625,0.108512282177573,0.108567807977573
+KARA2m,ketol-acid reductoisomerase (2-aceto-2-hydroxybutanoate),2ahbut_m + h_m + nadph_m --> 23dhmp_m + nadp_m,YLR355C,"Valine, leucine and isoleucine metabolism",amino acid,0.0725645552465625,0.0726164056465625,0.108512282177573,0.108567807977573
+LEUTA,leucine transaminase,4mop_c + glu__L_c --> akg_c + leu__L_c,YJR148W,Cysteine and methionine metabolism,amino acid,-0.0986828353127625,-0.0987533483127625,-0.147569496421908,-0.147645007821908
+VALTA,valine transaminase,akg_c + val__L_c --> 3mob_c + glu__L_c,YJR148W,"Valine, leucine and isoleucine metabolism",amino acid,-0.0986828353127625,-0.0987533483127625,-0.147569496421908,-0.147645007821908
+ACt,acetate transport,ac_c --> ac_e,YCR010C,Transport,transport,0.530822707374089,0.672422922662641,0.0,0.0
+CO2t,CO2 transport,co2_c <=> co2_e,0,Transport,transport,-11.4892975731062,-11.7886529050449,-53.0046725095734,-53.0118544986869
+ETOHt,ethanol transport,etoh_c --> etoh_e,0,Transport,transport,-0.444672163534373,-0.444872163534373,-45.8953731020038,-45.8955731020038
+GLCt,glucose transport,glc__D_e --> glc__D_c,YDL245C or YDL247W or YDR342C or YDR343C or YDR345C or YDR536W or YEL069C or YFL011W or YHR092C or YHR094C or YHR096C or YJL214W or YJL219W or YJR158W or YJR160C or YLR081W or YMR011W or YNR072W or YOL156W or YDR387C,Transport,transport,4.0630532319131,4.0632532319131,27.6929134512668,27.6931134512668
+GLYCt,glycerol transport via channel,glyc_c --> glyc_e,YFL054C or YLL043W,Transport,transport,0.0,0.0,2.03163907569189,2.04543186980683
+A2OBUTtm,2-oxobutanoate transporter,2obut_c <=> 2obut_m,0,Transport,transport,1.0430812835693e-07,0.0726162940263748,1e-07,0.108567707977573
+ACtm,acetate transport,ac_c <=> ac_m,YCR010C or YNR002C,Transport,transport,-0.0531671157135037,-1e-07,-0.278204300809274,-1e-07
+ACALDtm,acetaldehyde transport,acald_c --> acald_m,0,Transport,transport,1e-07,0.431917135934093,1.912628218434e-07,0.279360546318627
+ALAtm,L-alanine transport,ala__L_m --> ala__L_c,0,Transport,transport,1e-07,0.0586897419533514,0.0212697164397869,0.342195734635028
+AKGMALtm,oxoglutarate/malate exchange,akg_m + mal__L_c --> akg_c + mal__L_m,YOR222W or YPL134C,Transport,transport,0.0332085024003008,100000000.0,0.371445049189704,100000000.0
+ASPGLUtm,aspartate-glutamate transporter,asp__L_m + glu__L_c --> asp__L_c + glu__L_m,YPR021C,Transport,transport,1e-07,0.0854762345552444,1e-07,0.526739731431007
+CITICITtm,citrate transport,cit_c + icit_m <=> cit_m + icit_c,YBR291C,Transport,transport,0.041905403137207,0.693163126707077,3e-07,0.717291463749313
+CITMALtm,citrate transport,cit_m + mal__L_c <=> cit_c + mal__L_m,YBR291C,Transport,transport,-99999999.2777861,0.693163025919197,-99999998.9328153,0.717291370034218
+CO2tm,CO2 transport,co2_c <=> co2_m,0,Transport,transport,-5.17186871170998,-4.18121220171452,-5.52014397502645,-3.77476491090782
+ETOHtm,ethanol transport,etoh_m --> etoh_c,0,Transport,transport,1e-07,0.431917035934093,9.941691702836e-08,0.279360446318627
+GLUtm,L-glutamate transport,glu__L_c --> glu__L_m,YPR021C or YBR104W,Transport,transport,1e-07,0.438157578740734,0.591894443452504,1.27045630733661
+GLYtm,glycine transport,gly_c <=> gly_m,YDL119C or YPR058W,Transport,transport,5.01541486382484,5.26909539103508,1.79603946208954,2.74359214305878
+MALPItm,malate transport,mal__L_c + pi_m --> mal__L_m + pi_c,YLR348C,Transport,transport,1e-07,0.0379131648954008,9.999987919366e-08,0.421580897493382
+OAAtm,oxaloacetate transport,h_c + oaa_c --> h_m + oaa_m,YKL120W,Transport,transport,1e-07,0.0280195158205316,0.50714503327654,0.995248420721284
+ORNtm,ornithine transport,h_c + orn_m --> h_m + orn_c,YOR130C,Transport,transport,0.0475550591945648,0.0820066559586328,0.0926682882548114,0.546723047498293
+PYRtm,pyruvate transport,h_c + pyr_c --> h_m + pyr_m,(YGL080W and YGR243W) or (YGL080W and YHR162W),Transport,transport,1e-07,0.913413657682083,1e-07,0.347615049058351
+SUCCPItm,succinate transport,pi_m + succ_c --> pi_c + succ_m,YLR348C,Transport,transport,9.999999997758e-08,0.0383858821921675,-0.000643093282558402,0.140649838258934
+SUCFUMtm,succinate-fumarate transport,fum_m + succ_c --> fum_c + succ_m,YJR095W,Transport,transport,0.0747648297281241,0.123667627473005,0.003684401512146,0.398295295952609
+THRtm,threonine transport,thr__L_c --> thr__L_m,YDR508C,Transport,transport,1e-07,0.0726163013384341,1e-07,0.108567707977573
+M6pism,mannose-6-phosphate isomerase,f6p_c --> man6p_c,YER003C,Carbohydrate biosynthesis,sugar,-0.158644626975894,-0.158757985175894,-0.150177662207798,-0.150254508207798
+GALU,UTP-glucose-1-phosphate uridylyltransferase,g1p_c + h_c + utp_c --> ppi_c + udpg_c,YHL012W or YKL035W,Carbohydrate biosynthesis,sugar,0.43560425374156,0.43591551114156,0.412355974589433,0.412566977389433
+NDPK2,nucleoside-diphosphate kinase (ATP:UDP),atp_c + udp_c --> adp_c + utp_c,YKL067W,Purine metabolism,nucleic acid,0.481713529691379,0.482057734091379,0.504646661590652,0.504904889590652
+ATPS3m,ATP synthase,3.0 adp_m + 10.0 h_c + 3.0 pi_m --> 3.0 atp_m + 3.0 h2o_m + 7.0 h_m,(Q0080 and Q0085 and Q0130 and YBL099W and YBR039W and YDL004W and YDR298C and YDR322C-A and YDR377W and YJR121W and YKL016C and YLR295C and YML081C-A and YPL078C and YPL271W) or (Q0080 and Q0085 and Q0130 and YBL099W and YBR039W and YDL004W and YDR298C and YDR377W and YJR121W and YKL016C and YLR295C and YML081C-A and YPL078C and YPL271W and YPR020W) or (Q0080 and Q0085 and Q0130 and YBL099W and YBR039W and YDL004W and YDR298C and YDR322C-A and YDR377W and YJR121W and YKL016C and YLR295C and YML081C-A and YPL078C and YPL271W and YJL180C and YLR393W and YNL315C and YOL077W-A and YCL005W-A),Oxidative phosphorylation,ox phos,13.0569449790291,13.8792653218446,6.05786405101935,7.35829186894843
+ATPHYD,ATP maintenance requirement,atp_c + h2o_c --> adp_c + h_c + pi_c,0,Unassigned,other,9.998069080608e-08,2.06360138133168,1e-07,3.08821690641344
+ca2_EX,Ca2+ exchange,ca2_out --> ca2_e,0,Exchange,transport,0.000359951005381171,0.000360208205381171,0.00050263767430765,0.00050289487430765
+co2_EX,carbon dioxide exchange,co2_e <=> co2_out,0,Exchange,transport,11.4892975731062,11.7886529050449,53.0046725124121,53.0118544995785
+cu2_EX,Cu2+ exchange,cu2_out --> cu2_e,0,Exchange,transport,3.19085650182376e-05,3.19313650182376e-05,4.45573054985008e-05,4.45801054985008e-05
+fe2_EX,iron(2+) exchange,fe2_out --> fe2_e,0,Exchange,transport,0.000185853396246577,0.000185986196246577,0.000259526761850917,0.000259659561850917
+glc_EX,D-glucose exchange,glc__D_out --> glc__D_e,0,Exchange,transport,4.0630532319131,4.0632532319131,27.6929134512668,27.6931134512668
+h2o_EX,water exchange,h2o_e --> h2o_out,0,Exchange,transport,17.4656542939139,17.7632995307573,14.9784799822348,14.9853762526338
+h_EX,H+ exchange,h_e --> h_out,0,Exchange,transport,1.12905190188884,1.30360450106679,1e-07,1.08138116176773
+k_EX,potassium exchange,k_out --> k_e,0,Exchange,transport,0.168961449765431,0.169082179765431,0.235938749685702,0.236059479685702
+mg2_EX,Mg2+ exchange,mg2_out --> mg2_e,0,Exchange,transport,0.0178035797817108,0.0178163011817108,0.0248610222003784,0.0248737436003784
+mn2_EX,Mn2+ exchange,mn2_out --> mn2_e,0,Exchange,transport,2.63105711553889e-05,2.63293711553889e-05,3.67402343584129e-05,3.67590343584129e-05
+nh4_EX,ammonium exchange,nh4_out --> nh4_e,0,Exchange,transport,1.95296629642071,1.95436175434594,3.11019337055205,3.11178485314365
+o2_EX,oxygen exchange,o2_out --> o2_e,0,Exchange,transport,-10.8636119886659,-11.1630159251298,-5.60685938851333,-5.60705938851333
+pi_EX,phosphate exchange,pi_out --> pi_e,0,Exchange,transport,-0.112055033723876,-0.112135329318971,-0.226856822144929,-0.226972860159014
+so4_EX,sulphate exchange,so4_out --> so4_e,0,Exchange,transport,-0.024508856830631,-0.024526369430631,-0.0357853791186512,-0.0358036905186512
+zn2_EX,Zn2+ exchange,zn2_out --> zn2_e,0,Exchange,transport,0.000441121916392477,0.000441437116392477,0.000615985205838923,0.000616300405838924
+ac_EX,acetate exchange,ac_e --> ac_out,0,Exchange,transport,0.530822707374089,0.672422922662641,0.0,0.0
+etoh_EX,ethanol exchange,etoh_e --> etoh_out,0,Exchange,transport,0.444672163534373,0.444872163534373,45.8953731020038,45.8955731020038
+glyc_EX,glycerol exchange,glyc_e --> glyc_out,0,Exchange,transport,0.0,0.0,2.03163907569189,2.04543186980683

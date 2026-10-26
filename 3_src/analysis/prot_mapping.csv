@@ -1,0 +1,263 @@
+Abbrevation,Protein
+ASNS1,"['ASN2', 'ASN1', 'ASN3']"
+ASPK,['HOM3']
+ASPTA,['AAT2']
+ASPTAm,['AAT1']
+ASAD,['HOM2']
+ALATA_L,['ALT2']
+ALATA_Lm,['ALT1']
+GLCS2,"['GSY1', 'GSY2']"
+PGMT,"['PGM1', 'PGM2']"
+GALU,"['UGP1', 'UGP2']"
+FBP,['FBP1']
+ICL,['ICL1']
+MALS,[None]
+MEm,['MAE1']
+PPCK,['PCK1']
+PC,"['PYC1', 'PYC2']"
+ACGKm,['ARG5']
+ACOTAm,['ARG8']
+ARGSL,['ARG4']
+ARGSS,['ARG1']
+CBPS,[]
+GLU5K,['PRO1']
+G5P5,"['PRO2', 'PRO3']"
+AGPRm,['ARG5']
+OCBT,['ARG3']
+ORNTACm,['ECM40']
+ampSYN1,[None]
+ampSYN2,[None]
+cmpSYN,[None]
+dampSYN,[None]
+dcmpSYN,[None]
+dgmpSYN,[None]
+dtmpSYN,[None]
+ergstSYN,[None]
+gmpSYN1,[None]
+gmpSYN2,[None]
+umpSYN,[None]
+zymstSYN,[None]
+ACONT,['ACO1']
+ACONTm,"['ACO1', 'ACO2']"
+AKGDm,"['KGD1', 'KGD2', 'PDE3']"
+CS,[None]
+CSm,"['CIT1', 'CIT3']"
+ICDHxm,[]
+ICDHy,['IDP2']
+ICDHym,['IDP1']
+SUCOAS1m,[]
+BPNT,['MET22']
+SO4SO3,"['MET3', 'IPP1', 'MET16', 'MET14']"
+SULR,"['ECM17', 'MET10']"
+MTHFR3,"['MET12', 'MET13']"
+FTHFL,['ADE3']
+MTHFC,['ADE3']
+MTHFD,['ADE3']
+ANS,"['TRP2', 'TRP3']"
+GLUDym,[None]
+GLUDy,"['GDH3', 'GDH1']"
+GLUSxm,[None]
+GLNS,['GLN1']
+ALCD2m,['ADH3']
+GLYK,['GUT1']
+G3PT,"['HOR2', 'RHR2']"
+G3PD1,['GPD1']
+G3PD2,['GPD1']
+AGTm,['AGT1']
+CYSTS,['CYS4']
+GHMT2,['SHM2']
+HSDy,['HOM6']
+HSK,['THR1']
+PGPS,"['SER1', 'SER2', 'SER3', 'SER33']"
+ENO,"['ERR2', 'ENO1', 'ENO2', 'ERR1', 'ERR3']"
+FBA,['FBA1']
+PGI,['PGI1']
+GAPD,"['TDH1', 'TDH2', 'TDH3']"
+PDHm,"['PDE1', 'PDE2', 'PDE3']"
+HEX1,"['HXK1', 'HXK2', 'GLK1']"
+PFK,[]
+PGK,['PGK1']
+PGM,"['GPM1', 'GPM2', 'GPM3']"
+PYK,"['CDC19', 'PYK2']"
+TPI,['TPI1']
+PRMICIi,['HIS6']
+ATPPRT,['HIS1']
+HISTD,['HIS4']
+HISTP,['HIS2']
+HSTPT,['HIS5']
+IGPDH,['HIS3']
+PRATPAMPC,['HIS4']
+PRPPS,"['PRS5', 'PRS4', 'PRS2', 'PRS3', 'PRS1']"
+FDH,"['FDH1', 'FDH2', 'FDH3']"
+METS,['MET6']
+CYSTGL,['CYS3']
+HSERTA,['MET2']
+AHSERL2,['MET17']
+ADK1,['ADK1']
+ADK1m,['ADK2']
+ATPHYD,[None]
+NDPK2,['YNK1']
+NADH2-u6i,"['NDE1', 'NDE2']"
+FUM,['FUM1']
+FUMm,['FUM1']
+PPA,['IPP1']
+PPAm,['PPA2']
+MDH,['MDH2']
+MDHm,['MDH1']
+PGL,"['SOL1', 'SOL3', 'SOL4', 'SOL2']"
+G6PDH2,['ZWF1']
+GND,"['GND2', 'GND1']"
+RPI,['RKI1']
+RPE,['RPE1']
+TALA,"['TAL1', 'TAL2']"
+TKT2,"['TKL1', 'TKL2']"
+TKT1,"['TKL2', 'TKL1']"
+ACOAH,['ACH1']
+ACS,['ACS2']
+ACSm,['ACS1']
+ALCD2x,"['ADH4', 'ADH5', 'SFA1', 'ADH1', 'ADH2']"
+HCITSm,[None]
+PYRDC,"['PDC6', 'PDC5', 'PDC1']"
+AATA,[None]
+MCITDm,[None]
+HACNHm,['LYS4']
+HICITDm,['LYS12']
+AASAD1,['LYS25']
+THRD_Lm,['ILV1']
+OXAGm,[None]
+SACCD2,['LYS1']
+SACCD1,['LYS9']
+THRA,['GLY1']
+THRS,['THR4']
+DHQT,['ARO1']
+DHQS,['ARO1']
+DDPA,"['ARO4', 'ARO3']"
+PSCVTi,['ARO1']
+ALDD2y,['ALD6']
+ALDD2xm,['ALD4']
+ALDD2ym,['ALD4']
+ANPRT,['TRP4']
+CHORM,['ARO7']
+CHORS,['ARO2']
+IGPS,['TRP3']
+PHETA1,['ARO9']
+PRAIi,['TRP1']
+PPNDH,['PHA2']
+PPND2,['TYR1']
+SHK3D,['ARO1']
+SHKK,['ARO1']
+TRPS1,['TRP5']
+TYRTA,['AAT2']
+ACHBSm,['ILV26']
+IPPMIb,['LEU1']
+IPPS,"['LEU4', 'LEU5']"
+OMCDC,['BAT2']
+IPPMIa,['LEU1']
+IPMD,['LEU2']
+KARA1m,['ILV5']
+ACLSm,['ILV26']
+DHAD1m,['ILV3']
+DHAD2m,['ILV3']
+ILETA,['BAT2']
+KARA2m,['ILV5']
+LEUTA,['BAT2']
+VALTA,['BAT2']
+Galkin,['GAL1']
+Gal7,['GAL7']
+Gal10,['GAL10']
+Mankin,"['HXK1', 'HXK2']"
+M6pism,['PMI40']
+Tps1,['TPS1']
+Tps2,['TPS2']
+Trha,"['NTH1', 'NTH2', 'ATH1']"
+GLCdeg,[None]
+DAK,['DAK1']
+GCY1,['GCY1']
+MALTGD,"['MAL32', 'MAL12', 'FSP2', 'MAL33', 'MAL13', 'MAL14']"
+protein_reaction,[None]
+lipids_reaction,[None]
+cell-wall_reaction,[None]
+dna_reaction,[None]
+rna_reaction,[None]
+storage_reaction,[None]
+NADH2-u6m,"['NDI1', 'ACP1']"
+ComplexII,"['SDH2', 'SDH3', 'SDH4']"
+ComplexIII,['CBC1']
+ComplexIV,"['CCO1', 'CCO2']"
+ATPS3m,"['ATPS2', 'ATPS1']"
+ATPASE,"['PMA1', 'PMA2']"
+POSQt,[None]
+POSQtm,[None]
+Ht,[None]
+Htm,[None]
+IONPUMP,"['PMA1', 'PMA2']"
+IONPUMPm,"['PMA1', 'PMA2']"
+ACt-1,['ADY2']
+ACt-1+H,['ADY2']
+CO2t-1,[None]
+CO2t-1+H,[None]
+ETOHt+0,[None]
+GLCt+0,"['HXT4', 'GAL2', 'HXT11', 'STL1', 'HXT1', 'HXT13', 'HXT15', 'HXT16', 'HXT10', 'HXT17', 'HXT2', 'HXT3', 'HXT5', 'HXT6', 'HXT7', 'HXT8', 'HXT9']"
+GLYCt+0,['FPS1']
+H2Ot+0,[None]
+NH3t+1,"['MEP1', 'MEP2', 'MEP3']"
+NH3t+1-H,"['MEP1', 'MEP2', 'MEP3']"
+O2t,[None]
+PIt-1,"['PHO84', 'PHO87', 'PHO89', 'PHO90', 'PHO91', 'GIT1']"
+PIt-1+H,"['PHO84', 'PHO87', 'PHO89', 'PHO90', 'PHO91', 'GIT1']"
+PYRt-1,['JEN1']
+PYRt-1+H,['JEN1']
+SO4t-2+2H,[None]
+SO4t-2+H,"['SUL1', 'SUL2', 'SUL3']"
+SO4t-2,"['SUL1', 'SUL2', 'SUL3']"
+SUCCt-2+2H,[None]
+SUCCt-2+H,[None]
+SUCCt-2,[None]
+2OBUTtm-1,[None]
+2OBUTtm-1+H,[None]
+2OXOADPAKGtm-2-2,['ODC1']
+3MOBtm-1,[None]
+3MOBtm-1+H,[None]
+3MOPtm-1,[None]
+3MOPtm-1+H,[None]
+ACtm-1,[None]
+ACtm-1+H,[None]
+ACALDtm+0,[None]
+ALAtm+0,[None]
+ADPATPtm-4-2,"['AAC3', 'PET9', 'AAC1']"
+ADPATPtm-4-3,"['AAC3', 'PET9', 'AAC1']"
+AKGMALtm-2-2,[None]
+ASPGLUtm-1-1,['AGC1']
+CITICITtm-3-3,['CTP1']
+CITMALtm-3-2,['CTP1']
+CITMALtm-3+H-2,['CTP1']
+CO2tm-1,[None]
+CO2tm-1+H,[None]
+ETOHtm+0,[None]
+GLNtm+0,[None]
+GLUtm-1,['AGC1']
+GLUtm-1+H,['AGC1']
+GLYtm+0,[None]
+GLXtm-1,[None]
+GLXtm-1+H,[None]
+H2Otm+0,[None]
+MALPItm-2-2,['DIC1']
+NH3tm+1,[None]
+NH3tm+1-H,[None]
+O2tm+0,[None]
+OAAtm-2+2H,['OAC1']
+OAAtm-2+H,['OAC1']
+OAAtm-2,['OAC1']
+ORNtm+1,['ORT1']
+ORNtm+1-H,['ORT1']
+PItm-2+2H,['MIR1']
+PItm-2+H,['MIR1']
+PItm-2,['MIR1']
+PYRtm-1,[None]
+PYRtm-1+H,[None]
+SUCCPItm-2-2,['DIC1']
+SUCFUMtm-2-2,['SFC1']
+THRtm+0,[None]
+GALt+0,['GAL2']
+Mant+0,"['HXT1', 'SNF3']"
+MALTt+1,"['MAL11', 'MAL31', 'MPH2', 'MPH3']"

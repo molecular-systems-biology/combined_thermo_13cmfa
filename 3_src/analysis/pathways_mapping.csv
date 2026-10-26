@@ -1,0 +1,263 @@
+Abbrevation,Subsystem
+ASNS1,Alanine and aspartate metabolism
+ASPK,Alanine and aspartate metabolism
+ASPTA,Alanine and aspartate metabolism
+ASPTAm,Alanine and aspartate metabolism
+ASAD,Alanine and aspartate metabolism
+ALATA_L,Alanine and aspartate metabolism
+ALATA_Lm,Alanine and aspartate metabolism
+GLCS2,Alternate Carbon Metabolism
+PGMT,Alternate Carbon Metabolism
+GALU,Alternate Carbon Metabolism
+FBP,Anaplerotic reactions
+ICL,Anaplerotic reactions
+MALS,Anaplerotic reactions
+MEm,Anaplerotic reactions
+PPCK,Anaplerotic reactions
+PC,Anaplerotic reactions
+ACGKm,Arginine and Proline Metabolism
+ACOTAm,Arginine and Proline Metabolism
+ARGSL,Arginine and Proline Metabolism
+ARGSS,Arginine and Proline Metabolism
+CBPS,Arginine and Proline Metabolism
+GLU5K,Arginine and Proline Metabolism
+G5P5,Arginine and Proline Metabolism
+AGPRm,Arginine and Proline Metabolism
+OCBT,Arginine and Proline Metabolism
+ORNTACm,Arginine and Proline Metabolism
+ampSYN1,Biosynthesis
+ampSYN2,Biosynthesis
+cmpSYN,Biosynthesis
+dampSYN,Biosynthesis
+dcmpSYN,Biosynthesis
+dgmpSYN,Biosynthesis
+dtmpSYN,Biosynthesis
+ergstSYN,Biosynthesis
+gmpSYN1,Biosynthesis
+gmpSYN2,Biosynthesis
+umpSYN,Biosynthesis
+zymstSYN,Biosynthesis
+ACONT,Citrate Cycle (TCA)
+ACONTm,Citrate Cycle (TCA)
+AKGDm,Citrate Cycle (TCA)
+CS,Citrate Cycle (TCA)
+CSm,Citrate Cycle (TCA)
+ICDHxm,Citrate Cycle (TCA)
+ICDHy,Citrate Cycle (TCA)
+ICDHym,Citrate Cycle (TCA)
+SUCOAS1m,Citrate Cycle (TCA)
+BPNT,Cysteine Metabolism
+SO4SO3,Cysteine Metabolism
+SULR,Cysteine Metabolism
+MTHFR3,Folate Metabolism
+FTHFL,Folate Metabolism
+MTHFC,Folate Metabolism
+MTHFD,Folate Metabolism
+ANS,Glutamate and glutamine metabolism
+GLUDym,Glutamate and glutamine metabolism
+GLUDy,Glutamate and glutamine metabolism
+GLUSxm,Glutamate and glutamine metabolism
+GLNS,Glutamate and glutamine metabolism
+ALCD2m,Pyruvate metabolism
+GLYK,Glycerolipid Metabolism
+G3PT,Glycerolipid Metabolism
+G3PD1,Glycerolipid Metabolism
+G3PD2,Oxidative phosphorylation
+AGTm,Glycine and Serine Metabolism
+CYSTS,Glycine and Serine Metabolism
+GHMT2,Glycine and Serine Metabolism
+HSDy,Glycine and Serine Metabolism
+HSK,Glycine and Serine Metabolism
+PGPS,Glycine and Serine Metabolism
+ENO,Glycolysis/Gluconeogenesis
+FBA,Glycolysis/Gluconeogenesis
+PGI,Glycolysis/Gluconeogenesis
+GAPD,Glycolysis/Gluconeogenesis
+PDHm,Glycolysis/Gluconeogenesis
+HEX1,Glycolysis/Gluconeogenesis
+PFK,Glycolysis/Gluconeogenesis
+PGK,Glycolysis/Gluconeogenesis
+PGM,Glycolysis/Gluconeogenesis
+PYK,Glycolysis/Gluconeogenesis
+TPI,Glycolysis/Gluconeogenesis
+PRMICIi,Histidine Metabolism
+ATPPRT,Histidine Metabolism
+HISTD,Histidine Metabolism
+HISTP,Histidine Metabolism
+HSTPT,Histidine Metabolism
+IGPDH,Histidine Metabolism
+PRATPAMPC,Histidine Metabolism
+PRPPS,Histidine Metabolism
+FDH,Methane Metabolism
+METS,Methane Metabolism
+CYSTGL,Methionine Metabolism
+HSERTA,Methionine Metabolism
+AHSERL2,Methionine Metabolism
+ADK1,Nucleotide Salvage Pathways
+ADK1m,Nucleotide Salvage Pathways
+ATPHYD,Nucleotide Salvage Pathways
+NDPK2,Nucleotide Salvage Pathways
+NADH2-u6i,Oxidative phosphorylation
+FUM,Oxidative phosphorylation
+FUMm,Oxidative phosphorylation
+PPA,Oxidative phosphorylation
+PPAm,Oxidative phosphorylation
+MDH,Oxidative phosphorylation
+MDHm,Oxidative phosphorylation
+PGL,Pentose Phosphate Cycle
+G6PDH2,Pentose Phosphate Cycle
+GND,Pentose Phosphate Cycle
+RPI,Pentose Phosphate Cycle
+RPE,Pentose Phosphate Cycle
+TALA,Pentose Phosphate Cycle
+TKT2,Pentose Phosphate Cycle
+TKT1,Pentose Phosphate Cycle
+ACOAH,Pyruvate metabolism
+ACS,Pyruvate metabolism
+ACSm,Pyruvate metabolism
+ALCD2x,Pyruvate metabolism
+HCITSm,Pyruvate metabolism
+PYRDC,Pyruvate metabolism
+AATA,Threonine and Lysine Metabolism
+MCITDm,Threonine and Lysine Metabolism
+HACNHm,Threonine and Lysine Metabolism
+HICITDm,Threonine and Lysine Metabolism
+AASAD1,Threonine and Lysine Metabolism
+THRD_Lm,Threonine and Lysine Metabolism
+OXAGm,Threonine and Lysine Metabolism
+SACCD2,Threonine and Lysine Metabolism
+SACCD1,Threonine and Lysine Metabolism
+THRA,Threonine and Lysine Metabolism
+THRS,Threonine and Lysine Metabolism
+DHQT,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+DHQS,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+DDPA,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+PSCVTi,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+ALDD2y,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+ALDD2xm,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+ALDD2ym,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+ANPRT,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+CHORM,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+CHORS,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+IGPS,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+PHETA1,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+PRAIi,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+PPNDH,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+PPND2,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+SHK3D,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+SHKK,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+TRPS1,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+TYRTA,"Tyrosine, Tryptophan, and Phenylalanine Metabolism"
+ACHBSm,"Valine, leucine, and isoleucine metabolism"
+IPPMIb,"Valine, leucine, and isoleucine metabolism"
+IPPS,"Valine, leucine, and isoleucine metabolism"
+OMCDC,"Valine, leucine, and isoleucine metabolism"
+IPPMIa,"Valine, leucine, and isoleucine metabolism"
+IPMD,"Valine, leucine, and isoleucine metabolism"
+KARA1m,"Valine, leucine, and isoleucine metabolism"
+ACLSm,"Valine, leucine, and isoleucine metabolism"
+DHAD1m,"Valine, leucine, and isoleucine metabolism"
+DHAD2m,"Valine, leucine, and isoleucine metabolism"
+ILETA,"Valine, leucine, and isoleucine metabolism"
+KARA2m,"Valine, leucine, and isoleucine metabolism"
+LEUTA,"Valine, leucine, and isoleucine metabolism"
+VALTA,"Valine, leucine, and isoleucine metabolism"
+Galkin,Galactose degradation
+Gal7,Galactose degradation
+Gal10,Galactose degradation
+Mankin,Mannose degradation
+M6pism,Mannose degradation
+Tps1,Alternate Carbon Metabolism
+Tps2,Alternate Carbon Metabolism
+Trha,Alternate Carbon Metabolism
+GLCdeg,Alternate Carbon Metabolism
+DAK,Glycerolipid Metabolism
+GCY1,Glycerolipid Metabolism
+MALTGD,Maltose metabolism
+protein_reaction,Biomass synthesis
+lipids_reaction,Biomass synthesis
+cell-wall_reaction,Biomass synthesis
+dna_reaction,Biomass synthesis
+rna_reaction,Biomass synthesis
+storage_reaction,Biomass synthesis
+NADH2-u6m,Oxidative phosphorylation
+ComplexII,Oxidative phosphorylation
+ComplexIII,Oxidative phosphorylation
+ComplexIV,Oxidative phosphorylation
+ATPS3m,Oxidative phosphorylation
+ATPASE,Charge and proton tranporter
+POSQt,Charge and proton tranporter
+POSQtm,Charge and proton tranporter
+Ht,Charge and proton tranporter
+Htm,Charge and proton tranporter
+IONPUMP,Charge and proton tranporter
+IONPUMPm,Charge and proton tranporter
+ACt-1,"Transport, Extracellular"
+ACt-1+H,"Transport, Extracellular"
+CO2t-1,"Transport, Extracellular"
+CO2t-1+H,"Transport, Extracellular"
+ETOHt+0,"Transport, Extracellular"
+GLCt+0,"Transport, Extracellular"
+GLYCt+0,"Transport, Extracellular"
+H2Ot+0,"Transport, Extracellular"
+NH3t+1,"Transport, Extracellular"
+NH3t+1-H,"Transport, Extracellular"
+O2t,"Transport, Extracellular"
+PIt-1,"Transport, Extracellular"
+PIt-1+H,"Transport, Extracellular"
+PYRt-1,"Transport, Extracellular"
+PYRt-1+H,"Transport, Extracellular"
+SO4t-2+2H,"Transport, Extracellular"
+SO4t-2+H,"Transport, Extracellular"
+SO4t-2,"Transport, Extracellular"
+SUCCt-2+2H,"Transport, Extracellular"
+SUCCt-2+H,"Transport, Extracellular"
+SUCCt-2,"Transport, Extracellular"
+2OBUTtm-1,"Transport, mM"
+2OBUTtm-1+H,"Transport, mM"
+2OXOADPAKGtm-2-2,"Transport, mM"
+3MOBtm-1,"Transport, mM"
+3MOBtm-1+H,"Transport, mM"
+3MOPtm-1,"Transport, mM"
+3MOPtm-1+H,"Transport, mM"
+ACtm-1,"Transport, mM"
+ACtm-1+H,"Transport, mM"
+ACALDtm+0,"Transport, mM"
+ALAtm+0,"Transport, mM"
+ADPATPtm-4-2,"Transport, mM"
+ADPATPtm-4-3,"Transport, mM"
+AKGMALtm-2-2,"Transport, mM"
+ASPGLUtm-1-1,"Transport, mM"
+CITICITtm-3-3,"Transport, mM"
+CITMALtm-3-2,"Transport, mM"
+CITMALtm-3+H-2,"Transport, mM"
+CO2tm-1,"Transport, mM"
+CO2tm-1+H,"Transport, mM"
+ETOHtm+0,"Transport, mM"
+GLNtm+0,"Transport, mM"
+GLUtm-1,"Transport, mM"
+GLUtm-1+H,"Transport, mM"
+GLYtm+0,"Transport, mM"
+GLXtm-1,"Transport, mM"
+GLXtm-1+H,"Transport, mM"
+H2Otm+0,"Transport, mM"
+MALPItm-2-2,"Transport, mM"
+NH3tm+1,"Transport, mM"
+NH3tm+1-H,"Transport, mM"
+O2tm+0,"Transport, mM"
+OAAtm-2+2H,"Transport, mM"
+OAAtm-2+H,"Transport, mM"
+OAAtm-2,"Transport, mM"
+ORNtm+1,"Transport, mM"
+ORNtm+1-H,"Transport, mM"
+PItm-2+2H,"Transport, mM"
+PItm-2+H,"Transport, mM"
+PItm-2,"Transport, mM"
+PYRtm-1,"Transport, mM"
+PYRtm-1+H,"Transport, mM"
+SUCCPItm-2-2,"Transport, mM"
+SUCFUMtm-2-2,"Transport, mM"
+THRtm+0,"Transport, mM"
+GALt+0,"Transport, Extracellular"
+Mant+0,"Transport, Extracellular"
+MALTt+1,"Transport, Extracellular"

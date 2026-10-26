@@ -1,0 +1,106 @@
+general_plotting:
+    context: notebook
+    style: white
+    palette: tab10
+    font: sans-serif
+    font_scale: 1.4
+    color_codes: False
+    rc:
+        figure.frameon: True
+        axes.grid: False
+        axes.spines.top: False
+        axes.spines.right: False
+        axes.labelsize: 25
+        xtick.top: False
+        xtick.bottom: True
+        ytick.left: True
+        ytick.right: False
+        xtick.direction: in
+        ytick.direction: in
+        font.weight: normal 
+        font.family : Helvetica
+        savefig.dpi: 300
+        savefig.transparent: False
+        #mathtext.default: regular
+colors:
+    palette: Paired
+    extraColors:
+        - (1,1,1)
+        - (1,0,1)
+        - (0,0,1)
+        - (0, .5, 1)
+        - (.6, .5, 1)
+        - (1, .5, 1)
+        - (.6, .5, .2)
+# order_conds:
+#     - WT_Glc
+#     - WT_Mann
+#     - WT_Pyr
+#     - WT_Gal
+#     - dptsG_Glc
+#     - WT_Succ
+#     - WT_Ace
+#     - WT_GlyCAA
+#     - WT_GlcCAA
+#     - WT_Glyc
+#     - WT_Fum
+#     - WT_Fruc
+#     - WT_GlcArg
+#     - WT_GlchArg
+#     - dargR_Glc
+#     - dargR_GlcArg
+#     - dargR_GlchArg
+#     - dargR_GlcCAA
+settings_scatterplots:
+    marker: o
+    s: 62.5 ## for 2.5,2.5 fig
+    edgecolor: black
+    
+settings_errorbars:
+    marker: o
+    markersize: 15
+    markeredgecolor: black
+    elinewidth: 3
+    capsize: 5
+    linestyle: ''
+settings_scatter_pyplot:
+    marker: o
+    markersize: 15
+    markeredgecolor: black
+    linestyle: ''
+settings_pointplots:
+    linestyles: '-'
+    scale: 1.5
+    capsize: 0.2
+    errwidth: 3
+    ci: sd
+settings_barplots:
+    edgecolor: black
+    capsize: 0.2
+    errwidth: 2
+    ci: sd
+settings_stackedbars:
+    edgecolor: black
+    capsize: 4
+    alpha: 0.7
+settings_clustermap:
+    method: average
+    col_cluster: False
+    linewidths: 1
+    linecolor: white
+    cmap: coolwarm
+    robust: True
+    fmt: .2f
+    annot_kws: 
+    fontsize: 12
+settings_diagonal:
+    linestyle: '--'
+    color: gray
+settings_line:
+    linestyle: '-'
+    linewidth: 3
+
+#import cycle 
+#cc=cycler(linestyle=cfg['linestyle_cycler'])
+#ax.set_prop_cycle(cc)
+linestyle_cycler: ['-', '--', '-.', ':']

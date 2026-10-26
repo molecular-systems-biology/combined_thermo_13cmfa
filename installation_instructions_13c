@@ -1,0 +1,37 @@
+to run 13C : 
+create a new environment on the cluster : 
+ml Python/3.11.5/xx
+python -m venv ~/path_tovenv/venvname
+
+python -m pip install "setuptools<60"
+install numpy 1.26.4 and scipy 1.15.2 ,pybind11 ,pandas==2.2.3 (important that it is below 3), sympy, matplotlib , pyomo ,openpyxl, cvxopt , 
++
+pip install "jax[cpu]>=0.4,<=0.4.18" (important otherwise prepare functions don't finish, but there's no warning)
+
+python -m pip install openopt --no-build-isolation
+
+2. modifying some legacy functions that are called in openopt/funcdesigner/etc
+a) add 
+def asscalar(x):
+    return x.item()
+at the top of the numpy init.py file (located in the sitepackage of your venv)
+
+b) in  openopt/kernel/ooIter.py  (inthe site-packages of your venv) replace, 
+from time import time,  clock 
+with 
+from time import time, perf_counter as clock 
+; same, in openopt/kernel/runProbSolver.py ; and in result.py
+replace the time code line with
+from time import time, localtime,perf_counter as clock   
+
+c) in lib/python3.11/site-packages/openopt/kernel/ooMisc.py , replace the occurence of .A.A by .A.toarray()
+   p.A = p.A.A   ->   p.A = p.A.toarray()
+    
+
+
+then 
+python -m pip install FuncDesigner --no-build-isolation
+
+then copy my local freeflux folder  (don't install from pypi)
+and from the folder, 
+python -m pip install . --no-build-isolation --no-deps

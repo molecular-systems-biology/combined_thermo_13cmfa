@@ -1,0 +1,19 @@
+rxn_id,reactant,arrow,products
+MALTGD,malt[c],<==>,(2) glc-D[c]
+MALTt,malt[e],<==>,malt[c]
+malt_EX,malt[e],<==>,
+gal-D_EX,gal[e],<==>,
+man-D_EX,man[e],<==>,
+GALt,gal[e],<==>,gal[c]
+Mant,man[e],<==>,man[c]
+Galkin,gal[c],<==>,gal1p[c]
+Gal7,udpg[c] + gal1p[c],<==>,g1p[c] + udpgal[c]
+Gal10,udpgal[c],<==>,udpg[c]
+Mankin,man[c],<==>,man6p[c]
+M6pism,man6p[c],<==>,f6p[c]
+Tps1,udpg[c] + g6p[c],<==>,tre6p[c] + udp[c]
+Tps2,tre6p[c],<==>,tre[c]
+Trha,tre[c],<==>,(2) glc-D[c]
+GLCdeg,glycogen[c],<==>,g1p[c] + (3) glc-D[c]
+DAK,dhap[c],<==>,dha[c]
+GCY1,dha[c],<==>,glyc[c]
