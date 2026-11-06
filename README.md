@@ -94,6 +94,6 @@ Python 3.11, with:
 
 ## Getting started
 
-1. Clone the repository and install the dependencies.
+1. Clone the repository and install the dependencies (also see installation instructions files)
 2. Set the project root in the config modules in `3_src/analysis/` (and `BASE_FOLDER` in the stage 1 notebooks) to your local path.
 3. Run the notebooks in `2_notebooks/` in numerical order, from the `2_notebooks/` folder. Steps marked as cluster runs need their results in `4_results/` before the following notebooks can run.
