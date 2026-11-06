@@ -44,7 +44,7 @@ BASE_FOLDER=os.path.expanduser('~/202601_13C_files/INPUT_FILES/1_data/')
 # BASE_FOLDER=os.path.expanduser('~/thermo_flux/Nathan/glucose/202409_13C/1_data/')
 
 INPUT_FOLDER=f'{BASE_FOLDER}b_processed_files/'
-MODEL_FILE=f'{BASE_FOLDER}c_synthetic_data/reactions_processed_ATP.xlsx'
+MODEL_FILE=f'{BASE_FOLDER}c_synthetic_data/reactions_processed_ATP_2601.xlsx'
 
 arguments=sys.argv[1:]
 ###here args should be  self.optu = optu ## has to be set after the first fit (call of classic_c13problem)
@@ -73,12 +73,22 @@ print(condition,labeling_strategy,'mixed',flux_idx,direction,OUTPUT_FOLDER,FLUX_
 today = datetime.now().strftime("%Y%m%d")
 os.makedirs(OUTPUT_FOLDER, exist_ok = True)
 
+# Prefer a scheduler-provided unique ID if you have one (SLURM, PBS, etc.)
+JOB_ID = (
+    os.environ.get('SLURM_JOB_ID')
+    or os.environ.get('SLURM_ARRAY_JOB_ID', '') + '_' + os.environ.get('SLURM_ARRAY_TASK_ID', '')
+    or str(os.getpid())
+)
+
+FLAG_DIR = os.path.expanduser('~/HELPER_FREEFLUX_NF/flags')
+os.makedirs(FLAG_DIR, exist_ok=True)
+FLAG_FILE = os.path.join(FLAG_DIR, f'exit_flag_{JOB_ID}.txt')
+
 def signal_handler(signum, frame):
-    print(f"[Signal Handler] Caught signal {signum}, setting flag")
+    print(f"[Signal Handler] Caught signal {signum}, setting flag ({FLAG_FILE})")
     with open(FLAG_FILE, 'w') as f:
         f.write("TRUE")
 
-FLAG_FILE=os.path.expanduser('~/HELPER_FREEFLUX_NF/exit_flag.txt')
 if os.path.exists(FLAG_FILE):
     try:
         os.remove(FLAG_FILE)
@@ -86,11 +96,12 @@ if os.path.exists(FLAG_FILE):
         pass
 
 
+
 def main():   
     c13_problem=classic_c13.classic_c13_problem(optu=opt_u, flux_idx=flux_idx, direction=direction,
         condition=condition,labeling_strategy=labeling_strategy,dataset='mixed',sample_no=0,MODEL_FILE=MODEL_FILE,
         FLUX_FILE=FLUX_FILE,MS_FOLDER=INPUT_FOLDER,OUTPUT_FOLDER=OUTPUT_FOLDER,OUTPUT_FILENAME=OUTPUT_FILENAME
-                                                ,tol=tol,max_iters=max_iterations,n_jobs=1)
+                                                ,tol=tol,max_iters=max_iterations,n_jobs=1,FLAG_FILE=FLAG_FILE)
     
     signal.signal(signal.SIGTERM, signal_handler) ## can catch signal to stop the process in case of timelimit ##dont think its implemented yet here
 

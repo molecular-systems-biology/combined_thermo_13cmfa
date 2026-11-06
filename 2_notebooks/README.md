@@ -153,11 +153,15 @@ Quantifies how much the 13C fit changes each flux distribution, using `analysis.
 - Density of shape variation for both strains → `fig5d_<cond>overlaparea_bootstrap_2conds`.
 - Mean shape variation and EMD per subsystem (mapping from `c_synthetic_data/pathways_mapping.csv`) → `fig5e_<cond>_allsubsystems_overlaparea_bootstrap`, `fig5Supp_<cond>_subsystems_EMD_bootstrap`.
 
-### `3g_fitresults_fluxunravelled_bootstrap`
+### `3g_fitresults_dimreduc_vs_stoiciho`
+
+Samples with and without thermodynamic constraints are compared using dimensionlity reduction (PLS). -> Appendix FIG
+
+### `3h_fitresults_fluxunravelled_bootstrap`
 
 Split violin plots of all samples vs. bootstrapped best-fitting samples for selected reactions (G3PD1, ATPASE, ComplexIII, PFK) → `fig5e_distribchange_violions_KSdiff_bootstrap_<cond>_small`.
 
-### `3h_fitresults_pairwisedist`
+### `3i_fitresults_pairwisedist`
 
 Pairwise distances between net flux configurations within each strain, after normalizing to glucose uptake (GLCt+0) and scaling each reaction by its pooled standard deviation. Box plot → `pairwise_distances_boxplot_2strains`.
 
@@ -225,21 +229,21 @@ Figures: `fig7_histplot_distcomp_wtvtm6` (distribution of the overlap metric), `
 ## Data flow summary
 
 ```
-Input data ──► 1a–1d (VA, HPC) ──► *_flux_bounds_<cond>.csv ──► 1e (SM vs TSM comparison, Fig. 2)
+Input data ──► 1a–1d (VA, HPC) ──► *_flux_bounds_<cond>.csv ──► 1e (SM vs TSM comparison, Fig. 1)
                      │                        │
                      │                        └──► 1f (stoichiometric samples)
                      ▼
          drG0 mean / covariance ──► PTA sampling (external) ──► <cond>fluxsamples.csv
                                                                      │
-                                         2a–2d (sampling analysis, Fig. 4) ◄─┤
+                                         2a–2d (sampling analysis, Fig. 3) 
                                                                      ▼
                                          2a: 1000 drawn samples ──► FreeFlux fitting (HPC, external)
                                                                      │
-                                         3a–3h (fit analysis, Fig. 5 and supplement) ◄─┤
+                                         3a–3i (fit analysis, Fig. 4 and supplement) 
                                                                      ▼
                                          bootstrapped best-fitting set
                                            ├──► 4a, 4b, 4g (flux splits, flux map, ATP turnover)
                                            ├──► 4c → 4d → 4e (directions vs Yeast9)
-                                           ├──► 4f (prediction of Shen 2024 isotopomers, Fig. 6–7)
-                                           └──► ln conc sampling (external) ──► 4h (Fig. 7)
+                                           ├──► 4f (prediction of Shen 2024 isotopomers, Fig. EV)
+                                           └──► ln conc sampling (external) ──► 4h (Fig. 6)
 ```

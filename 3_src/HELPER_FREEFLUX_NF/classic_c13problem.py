@@ -11,7 +11,9 @@
 #
 # Created:     06/03/2024
 
-##version 1.1 Confidence intervals with nlp_opt_singleflux
+##version 1.2 Confidence intervals with nlp_opt_singleflux
+##  - squared weighted residuals (chi-square) instead of absolute
+##  - std scaled by sqrt(wss_min/(n-p)) if the best fit is worse than expected
 ###not updated to use solvers.py 
 #-------------------------------------------------------------------------------
 
@@ -42,7 +44,7 @@ class classic_c13_problem(c13.c13_problem):
                 self, condition: str, labeling_strategy: str, sample_no: int, MODEL_FILE: str, FLUX_FILE: str,
                 MS_FOLDER: str, OUTPUT_FOLDER: str, OUTPUT_FILENAME: str, dataset= 'mixed', tol=1e-6, max_iters=200, n_restart=1, n_jobs=8, 
                 flux_bounds=False, df_ex_flux=None,fit_fluxes=True, ##need all args necesseray for fit if we want to use the same class for the fit
-                optu=None, flux_idx =0, direction =1 , confidence_level=3.84, max_iterations=1000
+                optu=None, flux_idx =0, direction =1 , confidence_level=3.84, max_iterations=1000,FLAG_FILE=None
                 ):
         ###flux bounds ==false makes freeflux perform fva and use these bounds instead of the sample bounds
         super().__init__(
@@ -59,6 +61,9 @@ class classic_c13_problem(c13.c13_problem):
         self.direction = direction  
         self.flux_idx = flux_idx
         self.best_rss = None
+        self.sigma_scale = 1 ## set by _set_sigma_scale
+        self.scaled = False ## best_rss already scaled or not
+        self.FLAG_FILE = FLAG_FILE
 
     def __call__(self):
        #call super to fit the model
@@ -88,9 +93,12 @@ class classic_c13_problem(c13.c13_problem):
             f=_build_f(self)
             df=_build_df(f)
 
+            ##scale std and best_rss
+            # self._set_sigma_scale()
+
             ##now constraints
             c=self._build_c()
-            dc=self.combined_dc(self.optModelA,self.optModelB)
+            dc=self.combined_dc(self.optModelA,self.optModelB,scale=self.sigma_scale)
 
             #formulate problem with NLP openopt
             p = NLP(f=f,df=df,c=c,dc=dc,x0=self.optu,
@@ -98,19 +106,45 @@ class classic_c13_problem(c13.c13_problem):
                                 fTol=self.tol,xtol=self.tol,#fEnough=1e-1,
                                 maxIter = self.max_iterations,
                                 output_folder=self.OUTPUT_FOLDER,output_filename=self.OUTPUT_FILENAME,
-                                callback=self.callback_ralg, callback_freq=10,best_rss=self.best_rss,
+                                best_rss=self.best_rss,
             )
 
-            p.goal = 'max' if self.direction == 1 else p.goal #set dir
+            p.goal = 'max' if self.direction == 1 else p.goal
 
-            res = p.solve('gsubg',maxShoots=15) 
+            cb = openoptCallback(p, callback_freq=10, FLAG_FILE=self.FLAG_FILE)
+            p.callback = cb
 
-            print(res.ff, res.xf, res.istop>0)
+            try:
+                res = p.solve('gsubg', maxShoots=15)
+            except TimeLimitExit:
+                print(f'Time limit exit: flux {self.flux_idx}, '
+                      f'direction {self.direction}')
+                np.savetxt(
+                    f'{self.OUTPUT_FOLDER}/interrupted_{self.OUTPUT_FILENAME}.csv',
+                    cb.timeout_solution, delimiter=',',
+                    header=str(cb.timeout_obj))
+                # is_success=False: interrupted, not a converged bound
+                return (cb.timeout_obj, cb.timeout_solution, False,
+                        cb.timeout_constr)
+
+            print(res.ff, res.istop, res.msg)
             is_success = res.istop > 0
-            optimized_vars = res.xf
-            
-            return res.ff, optimized_vars, is_success , p.point(res.xf).sum_of_all_active_constraints()
+            return (res.ff, res.xf, is_success,
+                    p.point(res.xf).sum_of_all_active_constraints())
 
+    # def _set_sigma_scale(self):
+    #     '''scale std by sqrt(wss_min/(n-p)) over both datasets, never below 1.
+    #     wss_min is the best_rss from the fit (unscaled std); best_rss is then divided by scale**2'''
+    #     if self.scaled: ## only once, otherwise best_rss is divided again
+    #         return
+    #     wss_min = self.best_rss  # unscaled, from the fit
+    #     n = sum(np.size(fit.model.measured_MDVs[emuid][0])
+    #             for fit in (self.fitA, self.fitB) for emuid in fit.model.target_EMUs)
+    #     p = len(self.optu)
+    #     self.sigma_scale = max(np.sqrt(wss_min / (n - p)), 1)
+    #     self.best_rss = wss_min / self.sigma_scale**2  # scaled
+    #     self.scaled = True
+    #     print(f"wss_min={wss_min}, n={n}, p={p}, scale={self.sigma_scale}")
 
     def _build_c(self):
         '''nonlinear constraint : RSS(U) - RSS(opt_u) - confidence_level <= 0'''
@@ -120,19 +154,20 @@ class classic_c13_problem(c13.c13_problem):
         return c
 
     @staticmethod
-    def combined_dc(optModel1,optModelU):
-        '''derivative of c is just d(rss)/du'''
+    def combined_dc(optModel1,optModelU,scale=1):
+        '''derivative of c is just d(rss)/du, divided by scale**2 since std is scaled by scale'''
         optModel1.build_gradient()
         optModelU.build_gradient()
         def dc(u): ## here the derivative of constraint is the derivative of the preivous obj func(RSS(U))
-            return optModel1.df(u)+optModelU.df(u)
+            return (optModel1.df(u)+optModelU.df(u))/scale**2
         return dc
 
     def _c13_get_rss(self,u=None):
         if u is not None:
             self.optu=u
         sim_MDVs_A,sim_MDVs_B=self._u_to_SIMMDV()
-        rss = self.calc_rss(sim_MDVs_A,self.fitA)+self.calc_rss(sim_MDVs_B,self.fitB)
+        rss = (self.calc_rss(sim_MDVs_A,self.fitA,scale=self.sigma_scale)
+               +self.calc_rss(sim_MDVs_B,self.fitB,scale=self.sigma_scale))
         return rss
 
     def _u_to_SIMMDV(self):
@@ -147,40 +182,101 @@ class classic_c13_problem(c13.c13_problem):
         return sim_MDVs_A,sim_MDVs_B
 
     @staticmethod
-    def calc_rss(sim_MDVs,fit):
-        rss=0
-        def least_square_error(simulated,experimental,std_exp):
-            """all inputs are np arrays of the same size
-            here we calculate the absolute error otherwise too high values with squared"""
-            ##replace 0 with 1 in std_exp
-            std_exp=np.where(std_exp==0,1,std_exp)
-            ##now we can calculate the least square error, absolute not squared
-            error=np.sum((abs(simulated-experimental)/std_exp))
-            return error
+    def calc_rss(sim_MDVs, fit, method='squared', zero_std=1, scale=1):
+        """Weighted residual error between simulated and measured MDVs.
+
+        Parameters
+        ----------
+        sim_MDVs : dict
+            Simulated MDVs, keyed by EMU id.
+        fit : Fitter
+            FreeFlux fitter holding the target EMUs and measured MDVs (mean, std).
+        method : {'squared', 'absolute'}
+            'squared'  : sum(((sim - exp) / std)**2), i.e. -2 log-likelihood for
+                         Gaussian errors (use with the chi-square threshold, e.g. 3.84).
+            'absolute' : sum(|sim - exp| / std) (previous behaviour).
+        zero_std : float
+            Value used to replace standard deviations equal to 0.
+        scale : float
+            Factor by which all standard deviations are multiplied.
+        """
+        if method not in ('squared', 'absolute'):
+            raise ValueError("method must be 'squared' or 'absolute'")
+
+        def weighted_error(simulated, experimental, std_exp):
+            simulated = np.asarray(simulated, dtype=float)
+            experimental = np.asarray(experimental, dtype=float)
+            std_exp = np.asarray(std_exp, dtype=float)
+            std_exp = np.where(std_exp == 0, zero_std, std_exp) * scale
+            residuals = (simulated - experimental) / std_exp
+            if method == 'squared':
+                return np.sum(residuals**2)
+            return np.sum(np.abs(residuals))
+
+        rss = 0.0
         for emuid in fit.model.target_EMUs:
-            rss+=least_square_error(sim_MDVs[emuid],fit.model.measured_MDVs[emuid][0],fit.model.measured_MDVs[emuid][1])
+            measured_mean, measured_std = fit.model.measured_MDVs[emuid][0], fit.model.measured_MDVs[emuid][1]
+            rss += weighted_error(sim_MDVs[emuid], measured_mean, measured_std)
         return rss
     
-    @staticmethod
-    def callback_ralg(p): 
-        if p.iter %p.callback_freq==0:
-            print('lin residual',p.point(p.xk).all_lin())
-            try : #if we have p.c ,don't have to do an extra checking operation with if
-                print('NLP obj constraint',p.c(p.xk).max())
-            except:
-                pass
-            if p.point(p.xk).all_lin()> p.contol: # p.rk is current iter max residual
-                print('--= non-feasible iter =--')
-                print( 'itn:',  p.iter,p.contol)
-                return False
-            elif p.point(p.xk).all_lin() + p.c(p.xk).sum() <=p.contol and abs(p.best_rss-p.fk) >= 1000/(p.iter+1)  : ### increase chance to stop with iterations
-                print('sol ok')
-                np.savetxt(f'{p.output_folder}/optu_{p.output_filename}.csv',p.xk,delimiter=',',header=str(p.fk)) #same name so erased by final opt u
-                return False #just save
-            else: 
-                print('lin constraints ok but not nlp')
-                # np.savetxt(f'{p.output_folder}/belowtol_start_{p.restart_n}ite_{p.iter}_sol_{p.output_filename}.csv', p.xk, delimiter=',',header=str(p.fk))
-                return False      
-        return False
-    
+    # @staticmethod
+    # def callback_ralg(p): 
+    #     if p.iter %p.callback_freq==0:
+    #         print('lin residual',p.point(p.xk).all_lin())
+    #         try : #if we have p.c ,don't have to do an extra checking operation with if
+    #             print('NLP obj constraint',p.c(p.xk).max())
+    #         except:
+    #             pass
+    #         if p.point(p.xk).all_lin()> p.contol: # p.rk is current iter max residual
+    #             print('--= non-feasible iter =--')
+    #             print( 'itn:',  p.iter,p.contol)
+    #             return False
+    #         elif p.point(p.xk).all_lin() + p.c(p.xk).sum() <=p.contol and abs(p.best_rss-p.fk) >= 1000/(p.iter+1)  : ### increase chance to stop with iterations
+    #             print('sol ok')
+    #             np.savetxt(f'{p.output_folder}/optu_{p.output_filename}.csv',p.xk,delimiter=',',header=str(p.fk)) #same name so erased by final opt u
+    #             return False #just save
+    #         else: 
+    #             print('lin constraints ok but not nlp')
+    #             # np.savetxt(f'{p.output_folder}/belowtol_start_{p.restart_n}ite_{p.iter}_sol_{p.output_filename}.csv', p.xk, delimiter=',',header=str(p.fk))
+    #             return False      
+    #     return False
+class openoptCallback:
+    def __init__(self, p, callback_freq=10, FLAG_FILE=None):
+        self.p = p
+        self.callback_freq = callback_freq
+        self.FLAG_FILE = FLAG_FILE
+        # state at interruption
+        self.timeout_obj = None
+        self.timeout_solution = None
+        self.timeout_constr = None
 
+    def _flag_set(self):
+        if not self.FLAG_FILE or not os.path.exists(self.FLAG_FILE):
+            return False
+        with open(self.FLAG_FILE) as f:
+            return f.read().strip() == "TRUE"
+
+    def __call__(self, *args, **kwargs):
+        p = self.p
+        # check the flag at every iteration
+        if self._flag_set():
+            self.timeout_obj = p.fk
+            self.timeout_solution = np.copy(p.xk)
+            self.timeout_constr = p.point(p.xk).sum_of_all_active_constraints()
+            print('exit flag:', self.timeout_obj, self.timeout_constr)
+            raise TimeLimitExit('Time limit exit flag received')
+
+        if p.iter % self.callback_freq == 0:
+            all_lin = p.point(p.xk).all_lin()
+            c_val = np.max(p.c(p.xk))
+            print(f'at step {p.iter}', 'lin residual', all_lin,
+                  'NLP constraint', c_val, 'flux', p.fk)
+            # save the current point if feasible
+            if all_lin <= p.contol and c_val <= p.contol:
+                np.savetxt(f'{p.output_folder}/optu_{p.output_filename}.csv',
+                           p.xk, delimiter=',', header=str(p.fk))
+        return False
+
+class TimeLimitExit(Exception):
+    """Custom exception to indicate a time limit exit."""
+    pass
