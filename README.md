@@ -1,6 +1,6 @@
-# Thermodynamics-based 13C metabolic flux analysis in yeast
+# Combined thermodynamics and 13C metabolic flux analysis in yeast
 
-Code and analyses for a 13C metabolic flux analysis (13C-MFA) approach that starts from the thermodynamically feasible flux space instead of a single best fit. The approach is applied to *Saccharomyces cerevisiae*, comparing the wild type (**WT**) with the reduced-glucose-uptake strain **TM6**.
+Code and analyses for  combined thermodynamics and 13C metabolic flux analysis (13C-MFA) approach. The approach is applied to *Saccharomyces cerevisiae*, comparing the wild type (**WT**) with the reduced-glucose-uptake mutant strain **TM6**.
 
 The workflow has four steps:
 
