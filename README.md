@@ -6,8 +6,8 @@ The workflow has four steps:
 
 1. **Define the flux space.** A thermodynamic–stoichiometric model (TSM) is constrained with physiology (exchange fluxes) and intracellular metabolomics. Variability analysis gives bounds on fluxes, metabolite concentrations and reaction Gibbs energies.
 2. **Sample the flux space.** Thermodynamically feasible flux distributions are sampled (PTA), and 1000 of them are drawn as starting points for 13C fitting.
-3. **Fit the 13C labeling data.** Each sample is fitted to the labeling data with FreeFlux. The best-fitting samples, bootstrapped, give the final flux distributions and their uncertainty, which are compared with classic 13C-MFA.
-4. **Interpret and validate.** Flux splits, reaction directions (compared with Yeast9), prediction of independent isotopomer data (Shen et al. 2024), and metabolite concentrations of the best-fitting samples.
+3. **Fit the 13C labeling data.** Each sample is fitted to the labeling data with FreeFlux. The best-fitting samples give the final (bootstrapped) flux configurations.
+4. **Interpret and validate.** Flux configurations, reaction directions (compared with Yeast9), prediction of independent isotopomer data (Shen et al. 2024), and metabolite concentrations of the best-fitting samples.
 
 ---
 
